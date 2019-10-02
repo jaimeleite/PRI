@@ -8,9 +8,7 @@
 <!ELEMENT dataFim (#PCDATA) >
 <!ELEMENT nomeCadeira (#PCDATA) >
 <!ELEMENT numTpc (#PCDATA) >
-<!ELEMENT professor (#PCDATA) >
-<!ATTLIST professor
-          pWeb CDATA #REQUIRED >
+<!ELEMENT professor (#PCDATA|ligacao)* >
           
 <!ELEMENT titulo (#PCDATA) >
 <!ELEMENT subTitulo (#PCDATA) >
