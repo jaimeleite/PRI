@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/ASUS/Desktop/PRI/TP2/pr.dtd">
+<pr>
+    <informacaoGeral>
+        <dataInicio>2019-09-30</dataInicio>
+        <dataFim>2019-09-30</dataFim>
+        <nomeCadeira>PRI</nomeCadeira>
+        <numTpc></numTpc>
+        <professor>José Carlos Ramalho</professor>
+        <titulo></titulo>
+        <subTitulo>Com a descricao e numero do TPC</subTitulo>
+    </informacaoGeral>
+    <trabalhosAEntregar>
+        
+    </trabalhosAEntregar>
+    <resumo>
+        
+    </resumo>
+    <avaliandos>
+        <aluno>
+            <nome>Jaime Ricardo Faria Leite</nome>
+            <curso>colocar um link para a página do curso</curso>
+            <numeroAluno>A80757</numeroAluno>
+            <email>a80757@alunos.uminho.pt</email>
+        </aluno>
+    </avaliandos>
+</pr>
