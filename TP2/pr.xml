@@ -1,25 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pr SYSTEM "file:/C:/Users/ASUS/Desktop/PRI/TP2/pr.dtd">
+COLOCAR OS BOLDS, ITÁLICOS E LINKS
 <pr>
     <informacaoGeral>
         <dataInicio>2019-09-30</dataInicio>
-        <dataFim>2019-09-30</dataFim>
-        <nomeCadeira>PRI</nomeCadeira>
-        <numTpc></numTpc>
-        <professor>José Carlos Ramalho</professor>
-        <titulo></titulo>
-        <subTitulo>Com a descricao e numero do TPC</subTitulo>
+        <dataFim>2019-10-7</dataFim>
+        <nomeCadeira>PRI(incluída no perfil de PLC)</nomeCadeira>
+        <numTpc>TPC número 2</numTpc>
+        <professor>
+            <ligacao pWeb="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</ligacao>
+        </professor>
+        <titulo>Desenvolver um DTD para representar um Manifesto e codificar queries em XPath</titulo>
+        <subTitulo>Trabalho referente ao segundo TPC da unidade curricular de PRI</subTitulo>
     </informacaoGeral>
-    <trabalhosAEntregar>
-        
+    <trabalhosAEntregar 
+        <ligacao pWeb="https://github.com/jaimeleite/PRI/tree/master/TP2">Trabalhos realizados</ligacao>
     </trabalhosAEntregar>
     <resumo>
-        
+        <p><italico>Document Type Definition</italico>, mais conhecido por <bold>DTD</bold>, é o que define um dado documento da família <bold>SGML</bold>(Standard 
+            Generalized Markup Language). Para este documento, é apresentada a definição da sua estrutura, indicando os elementos e atributos necessários para a sua 
+            construção. Neste caso, e seguindo a ideia proposta pelo professor <ligacao pWeb="http://www4.di.uminho.pt/~jcr/">José Ramalho</ligacao>, é necessário
+            definir um documento <bold>XML</bold>(que repesenta a estrutura de um manifesto), usando para isso um <bold>DTD</bold>. 
+        </p>
+        <p>Sendo assim, vista a informação que é útil retratar neste tipo de ficheiros(manifesto), os vários TPC's a entregar terão a seguinte estrutura: informações gerais, 
+           com a identificação do número do TPC, bem como título, subtítulo(opcional) e intervalo de datas em que se encontra o TPC, entre outras; lista dos trabalhos a 
+           entregar, que será representada por um link para um repositório <bold>GitHub</bold>; resumo do que o TPC em questão aborda; identificação dos alunos que 
+            desenvolveram o TPC.
+        </p>
+        <p><bold>XPath</bold>é uma linguagem que permite selecionar partes(nós) de um dado documento <bold>XML</bold>. Na segunda parte do segundo TPC, foi proposto que, partindo 
+            de ficheiros no formato <bold>XML</bold>, se respondesse a várias queries.
+        </p>
     </resumo>
     <avaliandos>
         <aluno>
             <nome>Jaime Ricardo Faria Leite</nome>
-            <curso>colocar um link para a página do curso</curso>
+            <curso pWeb="https://miei.di.uminho.pt/">MIEI</curso>
             <numeroAluno>A80757</numeroAluno>
             <email>a80757@alunos.uminho.pt</email>
         </aluno>

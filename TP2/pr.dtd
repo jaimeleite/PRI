@@ -1,1 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT pr (informacaoGeral, trabalhosAEntregar, resumo, avaliandos) >
+
+<!--Elemento informacaoGeral-->
+<!ELEMENT informacaoGeral (dataInicio, dataFim, nomeCadeira,numTpc, professor, titulo, subTitulo?) >
+<!ELEMENT dataInicio (#PCDATA) >
+<!ELEMENT dataFim (#PCDATA) >
+<!ELEMENT nomeCadeira (#PCDATA) >
+<!ELEMENT numTpc (#PCDATA) >
+<!ELEMENT professor (#PCDATA) >
+<!ATTLIST professor
+          pWeb CDATA #REQUIRED >
+          
+<!ELEMENT titulo (#PCDATA) >
+<!ELEMENT subTitulo (#PCDATA) >
+
+<!--Elemento trabalhosAEntregar-->
+<!ELEMENT trabalhosAEntregar (ligacao)+ >
+<!ELEMENT ligacao (#PCDATA) >
+<!ATTLIST ligacao
+          pWeb CDATA #REQUIRED >
+          
+          
+<!--Elemento resumo-->
+<!ELEMENT resumo (p+) >
+<!ELEMENT p (#PCDATA|ligacao|bold|italico|underline)* >
+
+<!--Elemento avaliandos-->
+<!ELEMENT avaliandos (aluno+) >
+<!ELEMENT aluno (nome,curso,numeroAluno,email) >
+<!ELEMENT nome (#PCDATA) >
+<!ELEMENT curso (#PCDATA) >
+<!ATTLIST curso
+          pWeb CDATA #REQUIRED >
+<!ELEMENT numeroAluno (#PCDATA) >
+<!ELEMENT email (#PCDATA) >
+
+<!--Elemento bold, italico e underline-->
+<!ELEMENT bold (#PCDATA|italico)* >
+<!ELEMENT italico (#PCDATA|bold)* >
+<!ELEMENT underline (#PCDATA|bold)* >
