@@ -2,6 +2,7 @@
 //entrada[starts-with(./telefone,"253-")]
 
 (b)Seleccione todas as entradas que não são de Braga.
+//entrada[not(starts-with(./telefone,"253-"))]
 
 (c)Seleccione todas as entradas de pessoas com nome contendo "José" ou "Maria".
 //entrada[contains(./nome, "José")]|//entrada[contains(./nome, "Maria")]
@@ -10,3 +11,4 @@
 //grupo//entrada/@id
 
 (e)Seleccione os identificadores das entradas que não são do tipo "pessoa".
+//entrada[not(@tipo='pessoa')]//@id
