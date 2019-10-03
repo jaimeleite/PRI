@@ -1,7 +1,7 @@
 Queries sobre os arqueosítios:
 
 (a)Qual o "IDENTI" dos arqueossítios do concelho de Amares.
-//IDENTI[contains(../CONCEL,'Amares')]
+//CONCEL[contains(.,'Amares')]/../IDENTI
 
 (b)Quais os concelhos com arqueossítios registados.
 //CONCEL
