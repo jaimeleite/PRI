@@ -7,6 +7,7 @@ Queries sobre os arqueosítios:
 //CONCEL
 
 (c)Seleccione as descrições dos arqueossítios do concelho de Montalegre.
+//CONCEL[contains(.,'Montalegre')]/../DESCRI
 
 (d)Quantos arqueossítios pertencem ao concelho de Amares?
 count(//ARQELEM/CONCEL[contains(.,'Amares')])
