@@ -8,7 +8,7 @@
 //entrada[contains(./nome, "José")]|//entrada[contains(./nome, "Maria")]
 
 (d)Seleccione os identificadores das entradas pertencentes a grupos.
-//grupo//entrada/@id
+//grupo/entrada/@id
 
 (e)Seleccione os identificadores das entradas que não são do tipo "pessoa".
 //entrada[not(@tipo='pessoa')]/@id
