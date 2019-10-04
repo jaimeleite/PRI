@@ -1,14 +1,14 @@
 (a)Seleccione todas as entradas de Braga (indicativo 253).
 //telefone[starts-with(.,"253")]/..
 
-(b)Seleccione todas as entradas que n„o s„o de Braga.
+(b)Seleccione todas as entradas que n√£o s√£o de Braga.
 //telefone[not(starts-with(.,"253"))]/..
 
-(c)Seleccione todas as entradas de pessoas com nome contendo "JosÈ" ou "Maria".
-//nome[contains(.,"JosÈ")]/..|//nome[contains(.,"Maria")]/..
+(c)Seleccione todas as entradas de pessoas com nome contendo "Jos√©" ou "Maria".
+//entrada[contains(./nome, "Jos√©")]|//entrada[contains(./nome, "Maria")]
 
 (d)Seleccione os identificadores das entradas pertencentes a grupos.
 //grupo//entrada/@id
 
-(e)Seleccione os identificadores das entradas que n„o s„o do tipo "pessoa".
+(e)Seleccione os identificadores das entradas que n√£o s√£o do tipo "pessoa".
 //entrada[not(@tipo='pessoa')]/@id
