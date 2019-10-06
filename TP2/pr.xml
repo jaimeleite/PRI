@@ -14,6 +14,10 @@
     </informacaoGeral>
     <trabalhosAEntregar>
         <ligacao pWeb="https://github.com/jaimeleite/PRI/tree/master/TP2">Trabalhos realizados</ligacao>
+        <ligacao pWeb="https://github.com/jaimeleite/PRI/blob/master/TP2/pr.dtd">DTD</ligacao>
+        <ligacao pWeb="https://github.com/jaimeleite/PRI/blob/master/TP2/pr.xml">Manifesto</ligacao>
+        <ligacao pWeb="https://github.com/jaimeleite/PRI/blob/master/TP2/agenda.txt">Queries sobre a agenda</ligacao>
+        <ligacao pWeb="https://github.com/jaimeleite/PRI/blob/master/TP2/arq.txt">Queries sobre os arqueossítios</ligacao>
     </trabalhosAEntregar>
     <resumo>
         <p><italico>Document Type Definition</italico>, mais conhecido por <bold>DTD</bold>, é o que define um dado documento da família <bold>SGML</bold>(Standard 
@@ -23,7 +27,7 @@
         </p>
         <p>Sendo assim, vista a informação que é útil retratar neste tipo de ficheiros(manifesto), a descrição dos vários TPC's a entregar terá a seguinte estrutura: informações gerais, 
            com a identificação do número do TPC, bem como título, subtítulo(opcional) e intervalo de datas em que se encontra o TPC, entre outras; lista dos trabalhos a 
-           entregar, que será representada por um link para um repositório <bold>GitHub</bold>; resumo do que o TPC em questão aborda; identificação dos alunos que 
+           entregar, que será representada por um link para um repositório <bold>GitHub</bold> e para os trabalhos nesse mesmo repositório(referentes ao dado TPC); resumo do que o TPC em questão aborda; identificação dos alunos que 
             desenvolveram o TPC.
         </p>
         <p><bold>XPath</bold>é uma linguagem que permite selecionar partes(nós) de um dado documento <bold>XML</bold>. Na segunda parte do segundo TPC, foi proposto que, partindo 
