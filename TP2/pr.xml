@@ -21,7 +21,7 @@
             construção. Neste caso, e seguindo a ideia proposta pelo professor <ligacao pWeb="http://www4.di.uminho.pt/~jcr/">José Ramalho</ligacao>, é necessário
             definir um documento <bold>XML</bold>(que repesenta a estrutura de um manifesto), usando para isso um <bold>DTD</bold>. 
         </p>
-        <p>Sendo assim, vista a informação que é útil retratar neste tipo de ficheiros(manifesto), os vários TPC's a entregar terão a seguinte estrutura: informações gerais, 
+        <p>Sendo assim, vista a informação que é útil retratar neste tipo de ficheiros(manifesto), a descrição dos vários TPC's a entregar terão a seguinte estrutura: informações gerais, 
            com a identificação do número do TPC, bem como título, subtítulo(opcional) e intervalo de datas em que se encontra o TPC, entre outras; lista dos trabalhos a 
            entregar, que será representada por um link para um repositório <bold>GitHub</bold>; resumo do que o TPC em questão aborda; identificação dos alunos que 
             desenvolveram o TPC.
