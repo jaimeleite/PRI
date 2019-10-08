@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/ASUS/Desktop/TP3/pr.dtd">
+<pr>
+    <meta>
+        <keyname>TPC3-PRI-PLC</keyname>
+        <title>Desenvolvimento de uma página HTML para o manifesto e um website para os arqueossítios</title>
+        <subtitle>Trabalho referente ao terceiro TPC da unidade curricular de PRI</subtitle>
+        <bdate>2019-10-7</bdate>
+        <edate>2019-10-21</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage></homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A80757</identifier>
+            <name>Jaime Leite</name>
+            <email>a80757@alunos.uminho.pt</email>
+            <photo path=""/>
+        </member>
+    </workteam>
+    <abstract>
+        <p><i>Document Type Definition</i>, mais conhecido por <b>DTD</b>, é o que define um dado documento da família <b>SGML</b>(Standard 
+            Generalized Markup Language). Para este documento, é apresentada a definição da sua estrutura, indicando os elementos e atributos necessários para a sua 
+            construção. Neste caso, e seguindo a ideia proposta pelo professor <xref url="http://www4.di.uminho.pt/~jcr/">José Ramalho</xref>, é necessário
+            definir um documento <b>XML</b>(que repesenta a estrutura de um manifesto), usando para isso um <b>DTD</b>. 
+        </p>
+        <p>Sendo assim, vista a informação que é útil retratar neste tipo de ficheiros(manifesto), a descrição dos vários TPC's a entregar terá a seguinte estrutura: informações gerais, 
+            com a identificação do número do TPC, bem como título, subtítulo(opcional) e intervalo de datas em que se encontra o TPC, entre outras; lista dos trabalhos a 
+            entregar, que será representada por um link para um repositório <b>GitHub</b> e para os trabalhos nesse mesmo repositório(referentes ao dado TPC); resumo do que o TPC em questão aborda; identificação dos alunos que 
+            desenvolveram o TPC.
+        </p>
+        <p><b>XPath</b>é uma linguagem que permite selecionar partes(nós) de um dado documento <b>XML</b>. Na segunda parte do segundo TPC, foi proposto que, partindo 
+            de ficheiros no formato <b>XML</b>, se respondesse a várias queries.
+        </p>
+    </abstract>
+    <deriverables>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP2">Trabalhos realizados</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP2/pr.dtd">DTD</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP2/pr.xml">Manifesto</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP2/agenda.txt">Queries sobre a agenda</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP2/arq.txt">Queries sobre os arqueossítios</deliverable>
+    </deriverables>
+</pr>
