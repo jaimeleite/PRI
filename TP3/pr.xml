@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pr SYSTEM "file:/C:/Users/ASUS/Desktop/TP3/pr.dtd">
+<!DOCTYPE pr SYSTEM "file:/C:/Users/ASUS/Desktop/PRI/TP3/pr.dtd">
 <pr>
     <meta>
         <keyname>TPC3-PRI-PLC</keyname>
-        <title>Desenvolvimento de uma página HTML para o manifesto e um website para os arqueossítios</title>
+        <title>Desenvolvimento de página HTML para o manifesto e website para os arqueossítios</title>
         <subtitle>Trabalho referente ao terceiro TPC da unidade curricular de PRI</subtitle>
         <bdate>2019-10-7</bdate>
         <edate>2019-10-21</edate>
@@ -15,8 +15,8 @@
     </meta>
     <workteam>
         <member>
-            <identifier>A80757</identifier>
             <name>Jaime Leite</name>
+            <identifier>A80757</identifier>
             <email>a80757@alunos.uminho.pt</email>
             <photo path=""/>
         </member>
@@ -36,11 +36,11 @@
             de ficheiros no formato <b>XML</b>, se respondesse a várias queries.
         </p>
     </abstract>
-    <deriverables>
+    <deliverables>
         <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP2">Trabalhos realizados</deliverable>
         <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP2/pr.dtd">DTD</deliverable>
         <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP2/pr.xml">Manifesto</deliverable>
         <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP2/agenda.txt">Queries sobre a agenda</deliverable>
         <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP2/arq.txt">Queries sobre os arqueossítios</deliverable>
-    </deriverables>
+    </deliverables>
 </pr>

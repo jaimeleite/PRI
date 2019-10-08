@@ -7,47 +7,71 @@
     <xsl:template match="/">
         <html>
             <head>
+                <meta charset="UTF-8"/>
                 <title>
-                    <xsl:value-of select="meta/keyname"/>
-                    <meta charset="UTF-8"/>
+                    Manifesto
                 </title>
             </head>
             <style>
+                h1{
+                    font-size:48px;
+                }
                 div{
+                    border-top: solid blue;
                     text-align: justify;
                 }
             </style>
             <body>
+                <h1 style="margin-top:2cm" align="center"><span style="color:red">Manifesto</span></h1>
                 <xsl:apply-templates/>
             </body>
         </html>
     </xsl:template>
     
+    
+    
     <xsl:template match="meta">
         <div style="margin:2cm">
-            <h2><xsl:value-of select="keyname"/></h2>
-            <h1><xsl:value-of select="title"/></h1>
-            <h2><xsl:value-of select="subtitle"/></h2>
-            <h4><b>Inicial date: </b><xsl:value-of select="bdate"/></h4>
-            <h4><b>End date: <xsl:value-of select="edate"/></b></h4>
+            <h2><span style="color:red">Meta</span></h2>
+            <table>
+                <tr>
+                    <th align="left">Key_name: </th><td><xsl:value-of select="keyname"/></td>
+                </tr>
+                <tr>
+                    <th align="left">Title: </th><td><xsl:value-of select="title"/></td>
+                </tr>
+                <tr>
+                    <th align="left">Subtitle: </th><td><xsl:value-of select="subtitle"/></td>
+                </tr>
+                <tr>
+                    <th align="left">Inicial date: </th><td><xsl:value-of select="bdate"/></td>
+                </tr>
+                <tr>
+                    <th align="left">End date: </th><td><xsl:value-of select="edate"/></td>
+                </tr>    
+            </table>
+            <p><b><span style="color:red">Supervisor</span></b></p>
+            <p align="left"><b>Name: </b><span style="float:right"><xsl:value-of select="supervisor/name"/></span></p>
+            <p align="left"><b>Email: </b><xsl:value-of select="supervisor/email"/></p>
+            <p align="left"><b>Homepage: </b><xsl:value-of select="supervisor/homepage"/></p>
         </div>
     </xsl:template>
     
     <xsl:template match="workteam">
-        <div style="margin:2cm;background-color:lightblue">
-            <h4><span style="color:green">WorkTeam</span></h4>
+        <div style="margin:2cm">
+            <h2><span style="color:red">WorkTeam</span></h2>
             <table>
                 <tr>
-                    <th>Number: </th><td style="padding:5px;"><xsl:value-of select="member/identifier"/></td>
+                    <th align="left">Number: </th><td><xsl:value-of select="member/identifier"/></td>
                 </tr>
                 <tr>
-                    <th>Name: </th><td style="padding:5px;"><xsl:value-of select="member/name"/></td>
+                    <th align="left">Name: </th><td><xsl:value-of select="member/name"/></td>
                 </tr>
                 <tr>
-                    <th>Email: </th><td style="padding:5px;"><xsl:value-of select="member/email"/></td>
+                    <th align="left">Email: </th><td><xsl:value-of select="member/email"/></td>
                 </tr>
                 <tr>
-                    <th>Photo: </th><td style="padding:5px;"><xsl:value-of select="member/photo"/></td>
+                    <th align="left">Photo: </th><td><xsl:value-of select="member/photo"/></td>
                 </tr>
             </table>
          </div>
@@ -55,20 +79,24 @@
     
     <xsl:template match="abstract">
         <div style="margin:2cm">
-            <h3>Abstract</h3>
+            <h2><span style="color:red">Abstracts</span></h2>
             <xsl:apply-templates/>
         </div>
-    </xsl:template> 
-    
-    <xsl:template match="deriverables">
-        <p>
-            <xsl:apply-templates/>
-        </p>
     </xsl:template>
     
-    <xsl:template match="deriverable">
-        <div>
-            <xsl:apply-templates />
+    <xsl:template match="deliverables">
+        <div style="margin:2cm">
+            <h2><span style="color:red">Deriverables</span></h2>
+            <xsl:apply-templates/>
         </div>
+    </xsl:template>
+    
+    <xsl:template match="deliverable">
+        <li>
+            <xsl:apply-templates />
+        </li>
+    </xsl:template>
+    <xsl:template match="xref">
+        <a href="{@url}"><xsl:value-of select="."/></a>
     </xsl:template>
 </xsl:stylesheet>
