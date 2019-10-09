@@ -10,7 +10,7 @@
         <supervisor>
             <name>José Carlos Ramalho</name>
             <email>jcr@di.uminho.pt</email>
-            <homepage></homepage>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
         </supervisor>
     </meta>
     <workteam>
@@ -18,7 +18,7 @@
             <name>Jaime Leite</name>
             <identifier>A80757</identifier>
             <email>a80757@alunos.uminho.pt</email>
-            <photo path=""/>
+            <photo path="imagens/aluno.jpg"/>
         </member>
     </workteam>
     <abstract>
@@ -32,7 +32,7 @@
             entregar, que será representada por um link para um repositório <b>GitHub</b> e para os trabalhos nesse mesmo repositório(referentes ao dado TPC); resumo do que o TPC em questão aborda; identificação dos alunos que 
             desenvolveram o TPC.
         </p>
-        <p><b>XPath</b>é uma linguagem que permite selecionar partes(nós) de um dado documento <b>XML</b>. Na segunda parte do segundo TPC, foi proposto que, partindo 
+        <p><b>XPath</b> é uma linguagem que permite selecionar partes(nós) de um dado documento <b>XML</b>. Na segunda parte do segundo TPC, foi proposto que, partindo 
             de ficheiros no formato <b>XML</b>, se respondesse a várias queries.
         </p>
     </abstract>

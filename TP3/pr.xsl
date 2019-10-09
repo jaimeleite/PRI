@@ -51,9 +51,9 @@
                 </tr>    
             </table>
             <p><b><span style="color:red">Supervisor</span></b></p>
-            <p align="left"><b>Name: </b><span style="float:right"><xsl:value-of select="supervisor/name"/></span></p>
+            <p align="left"><b>Name: </b><xsl:value-of select="supervisor/name"/></p>
             <p align="left"><b>Email: </b><xsl:value-of select="supervisor/email"/></p>
-            <p align="left"><b>Homepage: </b><xsl:value-of select="supervisor/homepage"/></p>
+            <p align="left"><b>Homepage: </b><a href="{supervisor/homepage}"><xsl:value-of select="supervisor/homepage"/></a></p>
         </div>
     </xsl:template>
     
@@ -71,17 +71,30 @@
                     <th align="left">Email: </th><td><xsl:value-of select="member/email"/></td>
                 </tr>
                 <tr>
-                    <th align="left">Photo: </th><td><xsl:value-of select="member/photo"/></td>
+                    <th align="left">Photo: </th>
+                    <td>
+                        <img width="200" height="200">
+                            <xsl:attribute name="src">
+                                <xsl:value-of select="member/photo/@path"/>
+                            </xsl:attribute>
+                        </img>
+                    </td>
                 </tr>
             </table>
          </div>
     </xsl:template>
     
     <xsl:template match="abstract">
-        <div style="margin:2cm">
+        <div style="text-indent: 50px; margin:2cm">
             <h2><span style="color:red">Abstracts</span></h2>
             <xsl:apply-templates/>
         </div>
+    </xsl:template>
+    
+    <xsl:template match="p">
+        <p>
+            <xsl:apply-templates/>
+        </p>
     </xsl:template>
     
     <xsl:template match="deliverables">
@@ -93,7 +106,7 @@
     
     <xsl:template match="deliverable">
         <li>
-            <xsl:apply-templates />
+            <a href="{@path}"><xsl:value-of select="."/></a>
         </li>
     </xsl:template>
     <xsl:template match="xref">
