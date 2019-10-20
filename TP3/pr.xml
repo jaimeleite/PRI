@@ -23,12 +23,12 @@
     </workteam>
     <abstract>
         <p>O trabalho que foi necessário efetuar para o terceiro TPC de PRI relaciona-se com a especificação de uma stylesheet para transformar o <u>PR.xml</u> em 
-            <u>PR.html</u>, bem como especificar uma stylesheet para gerar um <i>website</i> para os arqueossítios.</p>
-        <p>Na aula de dia 7 de outubro de 2019, o professor <xref url="http://www4.di.uminho.pt/~jcr/">José Ramalho</xref> definiu, em conjunto com a turma, o <b>DTD</b>
+        <u>PR.html</u>, bem como especificar uma stylesheet para gerar um <i>website</i> para os arqueossítios.</p>
+        <p>Na aula do dia 7 de outubro de 2019, o professor <xref url="http://www4.di.uminho.pt/~jcr/">José Ramalho</xref> definiu, em conjunto com a turma, o <b>DTD</b>
         que serve de suporte para a definição do documento XML do manifesto. Até ao final do semestre, é obrigatório usar esse mesmo DTD para apresentar os vários TPC's.</p>
         <p>Sendo assim, para gerar a página HTML do <i>pr</i>, apoiado pela definição do <b>DTD</b>, definiu-se um ficheiro <i>.xsl</i> no qual, para os vários nodos do XML do
         manifesto, aplicam-se normas HTML por forma a representar de forma correta e legível toda a informação.</p>
-        <p>Em relação ao website para os arqueossítios, foi importante, mais uma vez, o trabalho desenvolvido na aula de dia 7 de outubro de 2019 pelo professor
+        <p>Em relação ao website para os arqueossítios, foi importante, mais uma vez, o trabalho desenvolvido na aula do dia 7 de outubro de 2019 pelo professor
         <xref url="http://www4.di.uminho.pt/~jcr/">José Ramalho</xref>, que efetuou a especificação de um ficheiro <i>.xsl</i>, criando uma página principal(<i>index.html</i>)
         e respetivas derivações("ficheiros auxiliares"). Assim para gerar um website para os arqueossítios, foi importante criar um <i>index.html</i>, no qual existem links
         que fazem a ligação com a descrição de cada arqueossítio referenciado nesses mesmos links. Tudo isto foi possível com a definição do ficheiro <i>arq.xsl</i>, que tem 
