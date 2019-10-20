@@ -97,6 +97,24 @@
         </p>
     </xsl:template>
     
+    <xsl:template match="b">
+        <b>
+            <xsl:apply-templates/>
+        </b>
+    </xsl:template>
+    
+    <xsl:template match="i">
+        <i>
+            <xsl:apply-templates/>
+        </i>
+    </xsl:template>
+    
+    <xsl:template match="u">
+        <u>
+            <xsl:apply-templates/>
+        </u>
+    </xsl:template>
+    
     <xsl:template match="deliverables">
         <div style="margin:2cm">
             <h2><span style="color:red">Deriverables</span></h2>
@@ -109,6 +127,7 @@
             <a href="{@path}"><xsl:value-of select="."/></a>
         </li>
     </xsl:template>
+    
     <xsl:template match="xref">
         <a href="{@url}"><xsl:value-of select="."/></a>
     </xsl:template>
