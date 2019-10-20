@@ -90,34 +90,36 @@
          </table>
       </div>
       
-      <div style="text-indent: 50px; margin:2cm">
+      <div style="margin:2cm">
          <h2>
             <span style="color:red">Abstracts</span>
          </h2>
          
-         <p>Document Type Definition, mais conhecido por DTD, é o que define um dado documento da família SGML(Standard 
-            Generalized Markup Language). Para este documento, é apresentada a definição da sua
-            estrutura, indicando os elementos e atributos necessários para a sua 
-            construção. Neste caso, e seguindo a ideia proposta pelo professor 
-            <a href="http://www4.di.uminho.pt/~jcr/">José Ramalho</a>, é necessário
-            definir um documento XML(que repesenta a estrutura de um manifesto), usando para isso um DTD. 
-            
+         <p>O trabalho que foi necessário efetuar para o terceiro TPC de PRI relaciona-se com
+            a especificação de uma stylesheet para transformar o PR.xml em 
+            PR.html, bem como especificar uma stylesheet para gerar um website para os arqueossítios.
          </p>
          
-         <p>Sendo assim, vista a informação que é útil retratar neste tipo de ficheiros(manifesto),
-            a descrição dos vários TPC's a entregar terá a seguinte estrutura: informações gerais,
-            
-            com a identificação do número do TPC, bem como título, subtítulo(opcional) e intervalo
-            de datas em que se encontra o TPC, entre outras; lista dos trabalhos a 
-            entregar, que será representada por um link para um repositório GitHub e para os trabalhos nesse mesmo repositório(referentes ao dado TPC); resumo do que
-            o TPC em questão aborda; identificação dos alunos que 
-            desenvolveram o TPC.
-            
+         <p>Na aula de dia 7 de outubro de 2019, o professor 
+            <a href="http://www4.di.uminho.pt/~jcr/">José Ramalho</a> definiu, em conjunto com a turma, o DTD
+            que serve de suporte para a definição do documento XML do manifesto. Até ao final
+            do semestre, é obrigatório usar esse mesmo DTD para apresentar os vários TPC's.
          </p>
          
-         <p>XPath é uma linguagem que permite selecionar partes(nós) de um dado documento XML. Na segunda parte do segundo TPC, foi proposto que, partindo 
-            de ficheiros no formato XML, se respondesse a várias queries.
+         <p>Sendo assim, para gerar a página HTML do pr, apoiado pela definição do DTD, definiu-se um ficheiro .xsl no qual, para os vários nodos do XML do
+            manifesto, aplicam-se normas HTML por forma a representar de forma correta e legível
+            toda a informação.
+         </p>
+         
+         <p>Em relação ao website para os arqueossítios, foi importante, mais uma vez, o trabalho
+            desenvolvido na aula de dia 7 de outubro de 2019 pelo professor
             
+            <a href="http://www4.di.uminho.pt/~jcr/">José Ramalho</a>, que efetuou a especificação de um ficheiro .xsl, criando uma página principal(index.html)
+            e respetivas derivações("ficheiros auxiliares"). Assim para gerar um website para
+            os arqueossítios, foi importante criar um index.html, no qual existem links
+            que fazem a ligação com a descrição de cada arqueossítio referenciado nesses mesmos
+            links. Tudo isto foi possível com a definição do ficheiro arq.xsl, que tem 
+            instruções HTML para cada nodo do ficheiro arq.xml&gt;.
          </p>
          
       </div>
@@ -128,23 +130,27 @@
          </h2>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRI/tree/master/TP2">Trabalhos realizados</a>
+            <a href="https://github.com/jaimeleite/PRI/tree/master/TP3">Trabalhos realizados</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRI/blob/master/TP2/pr.dtd">DTD</a>
+            <a href="https://github.com/jaimeleite/PRI/blob/master/TP3/pr.xml">Pr.xml</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRI/blob/master/TP2/pr.xml">Manifesto</a>
+            <a href="https://github.com/jaimeleite/PRI/blob/master/TP3/pr.xsl">Pr.xsl</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRI/blob/master/TP2/agenda.txt">Queries sobre a agenda</a>
+            <a href="https://github.com/jaimeleite/PRI/blob/master/TP3/pr.html">Pr.html</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRI/blob/master/TP2/arq.txt">Queries sobre os arqueossítios</a>
+            <a href="https://github.com/jaimeleite/PRI/blob/master/TP3/arq.xsl">Arq.xsl</a>
+         </li>
+         
+         <li>
+            <a href="https://github.com/jaimeleite/PRI/blob/master/TP3/website/index.html">Website/index.html</a>
          </li>
          
       </div>

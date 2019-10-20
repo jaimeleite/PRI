@@ -22,25 +22,24 @@
         </member>
     </workteam>
     <abstract>
-        <p><i>Document Type Definition</i>, mais conhecido por <b>DTD</b>, é o que define um dado documento da família <b>SGML</b>(Standard 
-            Generalized Markup Language). Para este documento, é apresentada a definição da sua estrutura, indicando os elementos e atributos necessários para a sua 
-            construção. Neste caso, e seguindo a ideia proposta pelo professor <xref url="http://www4.di.uminho.pt/~jcr/">José Ramalho</xref>, é necessário
-            definir um documento <b>XML</b>(que repesenta a estrutura de um manifesto), usando para isso um <b>DTD</b>. 
-        </p>
-        <p>Sendo assim, vista a informação que é útil retratar neste tipo de ficheiros(manifesto), a descrição dos vários TPC's a entregar terá a seguinte estrutura: informações gerais, 
-            com a identificação do número do TPC, bem como título, subtítulo(opcional) e intervalo de datas em que se encontra o TPC, entre outras; lista dos trabalhos a 
-            entregar, que será representada por um link para um repositório <b>GitHub</b> e para os trabalhos nesse mesmo repositório(referentes ao dado TPC); resumo do que o TPC em questão aborda; identificação dos alunos que 
-            desenvolveram o TPC.
-        </p>
-        <p><b>XPath</b> é uma linguagem que permite selecionar partes(nós) de um dado documento <b>XML</b>. Na segunda parte do segundo TPC, foi proposto que, partindo 
-            de ficheiros no formato <b>XML</b>, se respondesse a várias queries.
-        </p>
+        <p>O trabalho que foi necessário efetuar para o terceiro TPC de PRI relaciona-se com a especificação de uma stylesheet para transformar o <b>PR.xml</b> em 
+        <b>PR.html</b>, bem como especificar uma stylesheet para gerar um <b>website</b> para os arqueossítios.</p>
+        <p>Na aula de dia 7 de outubro de 2019, o professor <xref url="http://www4.di.uminho.pt/~jcr/">José Ramalho</xref> definiu, em conjunto com a turma, o <b>DTD</b>
+        que serve de suporte para a definição do documento XML do manifesto. Até ao final do semestre, é obrigatório usar esse mesmo DTD para apresentar os vários TPC's.</p>
+        <p>Sendo assim, para gerar a página HTML do <b>pr</b>, apoiado pela definição do <b>DTD</b>, definiu-se um ficheiro <i>.xsl</i> no qual, para os vários nodos do XML do
+        manifesto, aplicam-se normas HTML por forma a representar de forma correta e legível toda a informação.</p>
+        <p>Em relação ao website para os arqueossítios, foi importante, mais uma vez, o trabalho desenvolvido na aula de dia 7 de outubro de 2019 pelo professor
+        <xref url="http://www4.di.uminho.pt/~jcr/">José Ramalho</xref>, que efetuou a especificação de um ficheiro <i>.xsl</i>, criando uma página principal(<b>index.html</b>)
+        e respetivas derivações("ficheiros auxiliares"). Assim para gerar um website para os arqueossítios, foi importante criar um <b>index.html</b>, no qual existem links
+        que fazem a ligação com a descrição de cada arqueossítio referenciado nesses mesmos links. Tudo isto foi possível com a definição do ficheiro <b>arq.xsl</b>, que tem 
+        instruções <b>HTML</b> para cada nodo do ficheiro <b>arq.xml></b>.</p>
     </abstract>
     <deliverables>
-        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP2">Trabalhos realizados</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP2/pr.dtd">DTD</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP2/pr.xml">Manifesto</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP2/agenda.txt">Queries sobre a agenda</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP2/arq.txt">Queries sobre os arqueossítios</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP3">Trabalhos realizados</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP3/pr.xml">Pr.xml</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP3/pr.xsl">Pr.xsl</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP3/pr.html">Pr.html</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP3/arq.xsl">Arq.xsl</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP3/website/index.html">Website/index.html</deliverable>
     </deliverables>
 </pr>

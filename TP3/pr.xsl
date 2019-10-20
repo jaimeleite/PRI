@@ -85,7 +85,7 @@
     </xsl:template>
     
     <xsl:template match="abstract">
-        <div style="text-indent: 50px; margin:2cm">
+        <div style="margin:2cm">
             <h2><span style="color:red">Abstracts</span></h2>
             <xsl:apply-templates/>
         </div>

@@ -48,7 +48,6 @@
             <div style="border-top: solid lightgreen">
                 <b>Tipo: </b>
                 <xsl:value-of select="@ASSUNTO"/>
-                <xsl:apply-templates/>
             </div>
         </xsl:template>
         
@@ -162,7 +161,6 @@
             <div style="border-top: solid lightgreen">
                 <b>Imagem: </b>
                 <xsl:value-of select="@NOME"/>
-                <xsl:apply-templates/>
             </div>
         </xsl:template>
     
