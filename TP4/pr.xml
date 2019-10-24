@@ -38,11 +38,14 @@
         </p>
     </abstract>
     <deliverables>
-        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP3">Trabalhos realizados</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP3/pr.xml">Pr.xml</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP3/pr.xsl">Pr.xsl</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP3/pr.html">Pr.html</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP3/arq.xsl">Arq.xsl</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP3/website/index.html">Website/index.html</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP4">Trabalhos realizados</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP4/pr.xml">Pr.xml</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP4/pr.xsl">Pr.xsl</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP4/pr.html">Pr.html</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP4/pr.dtd">Pr.dtd</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP4/arq_son.js">Servidor</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP4/data">Ficheiros XML</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP4/doc2html.xsl">Conversão de XML para HTML</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP4/arq-son.xsl">Divisão em vários ficheiros XML</deliverable>
     </deliverables>
 </pr>
