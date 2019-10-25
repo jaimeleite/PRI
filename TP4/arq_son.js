@@ -4,15 +4,12 @@ var divisao
 var id_pagina
 
 var myserver = http.createServer(function (request, result) {
-    console.log(request.method + ' ' + request.url);
-
     divisao = request.url.split('/')
     id_pagina = divisao[divisao.length-1]
-
-    console.log(id_pagina)
-
+    var ms = divisao[divisao.length-2]
+    
     if(request.method == 'GET'){
-        if(request.url == '/w3.css'){
+        if(request.url == '/musica/w3.css'){
             fs.readFile('w3.css', (erro, dados)=>{
                 if(!erro){
                     result.writeHead(200, {'Content-Type':'text/css'}) 
@@ -25,7 +22,7 @@ var myserver = http.createServer(function (request, result) {
                 result.end()  
             });
         }
-        else if(parseInt(id_pagina,10) < 449){
+        else if(parseInt(id_pagina,10) < 449 && ms=='musica'){
             fs.readFile('data/doc' + id_pagina +'.xml',function(err,data){
                 result.writeHead(200,{'Content-Type':'text/xml'})
                 result.write(data)
