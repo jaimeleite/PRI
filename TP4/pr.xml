@@ -27,7 +27,7 @@
             <i>arq-son.xml</i>, efetuou-se a sua divisão por tags <i>doc</i>, usando para isso a stylesheet <i>arq.xsl</i>. Esta divisão foi efetuada, tendo como base o 
             trabalho desenvolvido na aula de dia 21/7/2019 pelo professor <xref url="http://www4.di.uminho.pt/~jcr/">José Ramalho</xref>.
         </p>
-        <p>Relativamente ao servidor, trataram-se, num ficheiro <i>.js</i>, os diferentes tipos de pedidos que o este poderia receber. Assim, foram especificados os casos em 
+        <p>Relativamente ao servidor, trataram-se, num ficheiro <i>.js</i>, os diferentes tipos de pedidos que este poderia receber. Assim, foram especificados os casos em 
             que é pedido um determinado ficheiro XML, por exemplo, doc1.xml. Para se apresentar o ficheiro ao "cliente", é necessário saber o número que foi indicado no pedido 
             <b>GET</b>. Ao texto indicado na barra de endereços, é aplicado um filtro(<b>split</b>), que retira do mesmo o identificador do ficheiro <b>XML</b>.
             Este ficheiro <b>XML</b> é lido, sendo posteriormente formado um pacote de dados com a informação lida. De seguida, foi necessário fazer a conversão do ficheiro 

@@ -90,7 +90,10 @@
     <xsl:template match="file">
         <div id="file" class="w3-content w3-justify w3-text-black w3-padding-35 w3-center w3-white">
             <h3><b>Ficheiro de audio</b></h3>
-            <xsl:apply-templates/>
+            <h5><b>Tipo de ficheiro</b></h5>
+            <xsl:value-of select="@t"/>
+            <h5><b>Descrição</b></h5>
+            <xsl:value-of select="."/>
         </div>
     </xsl:template>
 
