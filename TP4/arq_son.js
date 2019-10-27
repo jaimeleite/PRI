@@ -1,12 +1,12 @@
 var http = require('http')
 var fs = require('fs')
-var divisao
+var sl
 var id_pagina
 
 var myserver = http.createServer(function (request, result) {
-    divisao = request.url.split('/')
-    id_pagina = divisao[divisao.length-1]
-    var ms = divisao[divisao.length-2]
+    sl = request.url.split('/')
+    id_pagina = sl[sl.length-1]
+    var ms = sl[sl.length-2]
     
     if(request.method == 'GET'){
         if(request.url == '/musica/w3.css'){
@@ -17,18 +17,23 @@ var myserver = http.createServer(function (request, result) {
                 }
                 else {
                     result.writeHead(200, {'Content-Type':'text/plain'}) 
-                    result.write('Erro na leitura do CSS...')
+                    result.write('Erro ao ler o ficheiro de formatação...')
                 }
                 result.end()  
-            });
+            })
         }
         else if(parseInt(id_pagina,10) < 449 && ms=='musica'){
             fs.readFile('data/doc' + id_pagina +'.xml',function(err,data){
-                result.writeHead(200,{'Content-Type':'text/xml'})
-                result.write(data)
-                result.end()
-            })
-            
+                if(!erro){
+                    result.writeHead(200,{'Content-Type':'text/xml'})
+                    result.write(data)
+                }
+                else {
+                    res.writeHead(200, {'Content-Type':'text/plain'}) 
+                    res.write('Erro ao ler o ficheiro ' + 'data/doc' + id_pagina + '.xml...')
+                }
+                res.end() 
+            })   
         }
         else if(id_pagina=="doc2html.xsl"){
             fs.readFile('doc2html.xsl', (erro, dados)=>{
@@ -38,17 +43,19 @@ var myserver = http.createServer(function (request, result) {
                 }
                 else {
                     result.writeHead(200, {'Content-Type':'text/plain'}) 
-                    result.write('Erro na leitura do doc2html.xsl...')
+                    result.write('Erro ao ler doc2html.xsl...')
                 }
                 result.end()
-            });
+            })
         }
         else {
-            result.end('Erro: Pedido não suportado [' + request.url + ']');
+            res.writeHead(200, {'Content-Type':'text/plain; charset=utf-8'}) 
+            res.end('Erro: Pedido não suportado [' + req.url + ']')
         }
     }
     else {
-        result.end('Erro: Método não suportado [' + req.method + ']');
+        res.writeHead(200, {'Content-Type':'text/plain; charset=utf-8'}) 
+        res.end('Erro: Método não suportado [' + req.method + ']')
     }
 })
 myserver.listen(3021)

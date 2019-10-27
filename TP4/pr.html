@@ -95,49 +95,63 @@
             <span style="color:red">Abstracts</span>
          </h2>
          
-         <p>O trabalho que foi necessário efetuar para o quarto TPC de PRI relaciona-se com desenvolvimento
-            de um servidor capaz de responder a métodos 
-            <b>GET</b> 
-            provenientes do lado do cliente para obter informação sobre um determinado documento
-            
-            <b>XML</b> referente a uma dada música. Partindo de um 
+         <p>O trabalho que foi necessário efetuar para o quarto TPC de PRI relaciona-se com o
+            desenvolvimento (
+            <i>em NodeJs</i>) de um servidor capaz de responder a pedidos
+            provenientes do lado do cliente para obter informação referente a uma dada música.
+            Partindo de um 
             <b>XML</b> inicial, 
-            
-            <i>arq-son.xml</i>, efetuou-se a sua divisão por tags 
-            <i>doc</i>, usando para isso a stylesheet 
+            <i>arq-son.xml</i>, efetuou-se a sua 
+            divisão por tags 
+            <i>doc</i> em vários ficheiros 
+            <b>XML</b>, usando para isso a stylesheet 
             <i>arq.xsl</i>. Esta divisão foi efetuada, tendo como base o 
-            trabalho desenvolvido na aula de dia 21/7/2019 pelo professor 
+            trabalho desenvolvido na aula de dia 21/10/2019 pelo professor 
             <a href="http://www4.di.uminho.pt/~jcr/">José Ramalho</a>.
             
          </p>
          
          <p>Relativamente ao servidor, trataram-se, num ficheiro 
-            <i>.js</i>, os diferentes tipos de pedidos que o este poderia receber. Assim, foram especificados
+            <i>.js</i>, os diferentes tipos de pedidos que este poderia receber. Assim, foram especificados
             os casos em 
-            que é pedido um determinado ficheiro XML, por exemplo, doc1.xml. Para se apresentar
-            o ficheiro ao "cliente", é necessário saber o número que foi indicado no pedido 
+            que é pedido um determinado ficheiro XML, por exemplo, 
+            <u>doc1.xml</u>. Para se apresentar o ficheiro ao "cliente", é necessário saber o número que foi
+            indicado no método 
             
-            <b>GET</b>. Ao texto indicado na barra de endereços, é aplicado um filtro(
+            <b>GET</b>(de referir que para outro tipo de métodos, o servidor responde com uma mensagem de
+            erro). Ao 
+            <i>url</i> do 
+            <i>request</i>, é aplicado um 
+            filtro(
             <b>split</b>), que retira do mesmo o identificador do ficheiro 
-            <b>XML</b>.
-            Este ficheiro 
-            <b>XML</b> é lido, sendo posteriormente formado um pacote de dados com a informação lida. De
-            seguida, foi necessário fazer a conversão do ficheiro 
-            
+            <b>XML</b>. Este ficheiro 
+            <b>XML</b> é lido, sendo posteriormente formado um pacote de dados 
+            com a informação lida. De seguida, foi necessário fazer a conversão do ficheiro 
             <b>XML</b> para 
-            <b>HTML</b>. Existe uma stylesheet, designada por 
-            <i>doc2html</i>, que para nodos associados às tags 
-            <b>XML</b> de um dado documento, aplica 
-            instruções HTML aos mesmos. Sendo assim, também foi necessário especificar o caso
-            de o pedido 
+            <b>HTML</b>. Foi definida uma stylesheet, designada por 
+            <i>doc2html</i> 
+            que, para nodos associados às tags 
+            <b>XML</b> de um dado documento, aplica instruções HTML aos mesmos. Sendo assim, também foi
+            necessário especificar o caso de o 
+            método 
             <b>GET</b> conter a descrição do 
-            <i>doc2html</i>.
-            Por fim, definiu-se que o servidor também estaria apto para tratar de pedidos do ficheiro
+            <i>doc2html</i>. Por fim, definiu-se que o servidor também estaria apto para tratar de pedidos do
+            ficheiro 
+            <u>w3.css</u>, 
+            nos casos em que é necessário aplicar certos formatos e templates ao texto 
+            <b>HTML</b>. Nestes dois últimos casos, foram igualmente formados pacotes de dados com a 
+            informação lida dos ficheiros indicados. Para outro tipo de pedidos, o servidor responde
+            com uma mensagem de erro.
             
-            <u>w3.css</u>, nos casos em que é necessário aplicar certos formatos e 
-            templates ao texto 
-            <b>HTML</b>. Nestes dois últimos casos, foram igualmente formados pacotes de dados com a informação
-            lida dos ficheiros indicados.
+         </p>
+         
+         <p>É de realcar que os pedidos que o servidor está apto para tratar são sequenciais,
+            dado que, partindo, por exemplo, do URL inicial "http://localhost:3021/musica/8",
+            primeiramente é pedido ao servidor o ficheiro 
+            <u>doc8.xml</u>, sendo depois pedida a stylesheet de conversão para 
+            <b>HTML</b> e, por fim, é pedido o ficheiro 
+            
+            <u>w3.css</u>, para aplicar as formatações devidas ao ficheiro que se apresenta ao cliente.
             
          </p>
          
