@@ -29,10 +29,10 @@ var myserver = http.createServer(function (request, result) {
                     result.write(data)
                 }
                 else {
-                    res.writeHead(200, {'Content-Type':'text/plain'}) 
-                    res.write('Erro ao ler o ficheiro ' + 'data/doc' + id_pagina + '.xml...')
+                    result.writeHead(200, {'Content-Type':'text/plain'}) 
+                    result.write('Erro ao ler o ficheiro ' + 'data/doc' + id_pagina + '.xml...')
                 }
-                res.end() 
+                result.end() 
             })   
         }
         else if(id_pagina=="doc2html.xsl"){
@@ -49,13 +49,13 @@ var myserver = http.createServer(function (request, result) {
             })
         }
         else {
-            res.writeHead(200, {'Content-Type':'text/plain; charset=utf-8'}) 
-            res.end('Erro: Pedido não suportado [' + req.url + ']')
+            result.writeHead(200, {'Content-Type':'text/plain; charset=utf-8'}) 
+            result.end('Erro: Pedido não suportado [' + request.url + ']')
         }
     }
     else {
-        res.writeHead(200, {'Content-Type':'text/plain; charset=utf-8'}) 
-        res.end('Erro: Método não suportado [' + req.method + ']')
+        result.writeHead(200, {'Content-Type':'text/plain; charset=utf-8'}) 
+        result.end('Erro: Método não suportado [' + request.method + ']')
     }
 })
 myserver.listen(3021)
