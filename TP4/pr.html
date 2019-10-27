@@ -129,13 +129,13 @@
             com a informação lida. De seguida, foi necessário fazer a conversão do ficheiro 
             <b>XML</b> para 
             <b>HTML</b>. Foi definida uma stylesheet, designada por 
-            <i>doc2html</i> 
+            <i>doc2html.xsl</i> 
             que, para nodos associados às tags 
             <b>XML</b> de um dado documento, aplica instruções HTML aos mesmos. Sendo assim, também foi
             necessário especificar o caso de o 
             método 
-            <b>GET</b> conter a descrição do 
-            <i>doc2html</i>. Por fim, definiu-se que o servidor também estaria apto para tratar de pedidos do
+            <b>GET</b> conter a designação 
+            <i>doc2html.xsl</i>. Por fim, definiu-se que o servidor também estaria apto para tratar de pedidos do
             ficheiro 
             <u>w3.css</u>, 
             nos casos em que é necessário aplicar certos formatos e templates ao texto 
@@ -145,7 +145,7 @@
             
          </p>
          
-         <p>É de realcar que os pedidos que o servidor está apto para tratar são sequenciais,
+         <p>É de realçar que os pedidos que o servidor está apto para tratar são sequenciais,
             dado que, partindo, por exemplo, do URL inicial "http://localhost:3021/musica/8",
             primeiramente é pedido ao servidor o ficheiro 
             <u>doc8.xml</u>, sendo depois pedida a stylesheet de conversão para 
