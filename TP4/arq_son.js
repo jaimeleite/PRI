@@ -23,7 +23,7 @@ var myserver = http.createServer(function (request, result) {
             })
         }
         else if(parseInt(id_pagina,10) < 449 && ms=='musica'){
-            fs.readFile('data/doc' + id_pagina +'.xml',function(err,data){
+            fs.readFile('data/doc' + id_pagina +'.xml',function(erro,data){
                 if(!erro){
                     result.writeHead(200,{'Content-Type':'text/xml'})
                     result.write(data)
