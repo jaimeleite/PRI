@@ -97,13 +97,12 @@ router.delete('/alunos/:idAluno', function(req, res) {
   jsonfile.readFile(myBD, (erro, alunos)=>{
     if(!erro){
       var posicao = alunos.findIndex(c => c.identificador == identificador)
-      if(posicao > -1){
-        alunos.splice(posicao, 1)
-        jsonfile.writeFile(myBD, alunos, erro => {
-          if(erro) console.log(erro)
-          else console.log('Remoção do aluno efetuada com sucesso.')
-        })
-      }
+      
+      alunos.splice(posicao, 1)
+      jsonfile.writeFile(myBD, alunos, erro => {
+        if(erro) console.log(erro)
+        else console.log('Remoção do aluno efetuada com sucesso.')
+      })
     }
     res.render('index', {listAlunos: alunos})
   })
