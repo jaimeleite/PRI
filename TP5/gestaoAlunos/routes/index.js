@@ -70,18 +70,18 @@ router.post('/alunos/:idAluno/notas', function(req, res) {
 })
 
 router.post('/alunos', function(req, res) {
-    var registo = req.body
+    var al = req.body
     jsonfile.readFile(myBD, (erro, alunos)=>{
         if(!erro){
           var i,controlo = 0
           for (i = 0; alunos[i]; i++) {
-            if(registo.identificador == alunos[i].identificador){
+            if(al.identificador == alunos[i].identificador){
               controlo = 1
             }
           }
           if(controlo == 0){
-            registo.notas=[]
-            alunos.push(registo)
+            al.notas=[]
+            alunos.push(al)
             jsonfile.writeFile(myBD, alunos, erro => {
                 if(erro) console.log(erro)
                 else console.log('Registo gravado com sucesso.')
