@@ -8,7 +8,7 @@ var myBD = __dirname + "/../data/alunos.json"
 router.get('/alunos', function(req, res) {
   jsonfile.readFile(myBD, (erro, dados) => {
     if(!erro){
-        res.render('index', {lista: dados})              
+        res.render('index', {listAlunos: dados})              
     }
     else{
         res.render('error', {error: erro})  
@@ -19,7 +19,7 @@ router.get('/alunos', function(req, res) {
 router.get('/registarAluno', function(req, res) {
   jsonfile.readFile(myBD, (erro, dados) => {
     if(!erro){
-        res.render('registoAluno', {lista: dados})              
+        res.render('registoAluno', {listAlunos: dados})              
     }
     else{
         res.render('error', {error: erro})  
@@ -65,7 +65,7 @@ router.post('/alunos/:idAluno/notas', function(req, res) {
             else console.log('Registo gravado com sucesso.')
         })
       }
-      res.render('index', {lista: alunos})
+      res.render('index', {listAlunos: alunos})
   })
 })
 
@@ -88,24 +88,24 @@ router.post('/alunos', function(req, res) {
             })
           }
         }
-        res.render('registoAluno', {lista: alunos})
+        res.render('registoAluno', {listAlunos: alunos})
     })
 })
 
 router.delete('/alunos/:idAluno', function(req, res) {
-  var id = req.params.idAluno
+  var identificador = req.params.idAluno
   jsonfile.readFile(myBD, (erro, alunos)=>{
     if(!erro){
-      var index = alunos.findIndex(c => c.identificador == id)
-      if(index > -1){
-        alunos.splice(index, 1)
+      var posicao = alunos.findIndex(c => c.identificador == identificador)
+      if(posicao > -1){
+        alunos.splice(posicao, 1)
         jsonfile.writeFile(myBD, alunos, erro => {
           if(erro) console.log(erro)
-          else console.log('Aluno removido com sucesso.')
+          else console.log('Remoção do aluno efetuada com sucesso.')
         })
       }
     }
-    res.render('index', {lista: alunos})
+    res.render('index', {listAlunos: alunos})
   })
 })
 
@@ -113,7 +113,6 @@ router.delete('/alunos/:idAluno/notas/:indicador', function(req, res) {
   var indica = req.params.indicador
   var identAluno = req.params.idAluno
   var newAluno, posAluno
-
 
   jsonfile.readFile(myBD, (erro, alunos)=>{
     if(!erro){
