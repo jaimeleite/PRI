@@ -28,11 +28,11 @@ router.get('/registarAluno', function(req, res) {
 })
 
 router.get('/alunos/:idAluno', function(req, res) {
-  var id = req.params.idAluno
-  console.log(id)
+  var ident = req.params.idAluno
+  console.log(ident)
   jsonfile.readFile(myBD, (erro, alunos)=>{
-    var index = alunos.findIndex(c => c.identificador == id)
-      res.render('seeAluno', {al: alunos[index]})
+    var indice = alunos.findIndex(c => c.identificador == ident)
+      res.render('seeAluno', {al: alunos[indice]})
   })
 })
 
