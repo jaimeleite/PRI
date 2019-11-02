@@ -1,0 +1,18 @@
+extends layout
+block content
+    <div style="margin:1cm;">
+        .w3-container
+            header.w3-container.w3-green
+                h3 Adicionar uma nota
+            .w3-container
+                form.w3-container(action=`/alunos/${idAluno}/notas` method='POST')
+                    label
+                        b Indicador
+                    input.w3-input.w3-border.w3-light-white(type='text' name='indicador')
+                    label
+                        b Nota
+                    input.w3-input.w3-border.w3-light-white(type='text' name='nota')
+                    input.w3-btn.w3-green(type='submit' value='Enviar')
+                
+                a(href='/alunos') Voltar à página principal
+    </div>

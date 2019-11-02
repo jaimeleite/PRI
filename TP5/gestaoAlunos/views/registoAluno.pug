@@ -1,0 +1,22 @@
+extends layout
+block content
+    <div style="margin:1cm;">
+        .w3-container
+            header.w3-container.w3-green
+                h3 Registo de um aluno
+            erro
+            .w3-container
+                form.w3-container(action='/alunos' method='POST')
+                    label
+                        b Identificador
+                    input.w3-input.w3-border.w3-light-white(type='text' name='identificador')
+                    label
+                        b Nome
+                    input.w3-input.w3-border.w3-light-white(type='text' name='nome')
+                    label 
+                        b Curso 
+                    input.w3-input.w3-border.w3-light-white(type='text' name='curso')
+                    input.w3-btn.w3-green(type='submit' value='Enviar')
+                
+                a(href='/alunos') Voltar à página principal
+    </div>

@@ -1,0 +1,40 @@
+extends layout
+block content
+        <div style="margin:2cm; border-top: solid green;">
+            .w3-container
+                header.w3-container.w3-teal
+                h2 Menu
+                block navBar center
+                    button.w3-button.w3-green
+                        a(href='/registarAluno') Registar aluno
+                block container
+        </div>
+        <div style="margin:2cm; border-top: solid green;">
+            .w3-container
+                header.w3-container.w3-teal
+                h2 Lista de Alunos
+                table.w3-table-all
+                    tr
+                        th
+                        th Identificador
+                        th Curso
+                        th
+                        th
+                    each i in lista
+                        tr
+                            td
+                                form.form-inline(method="get" action=`/alunos/${i.identificador}`)
+                                    button.w3-button.w3-green(type="submit") Visualizar aluno
+                            td= i.identificador
+                            td= i.curso
+                            td
+                                form.form-inline(method="get" action=`/registoNotas/${i.identificador}`)
+                                    button.w3-button.w3-green(type="submit") Adicionar nota
+                            td
+                                button.w3-button.w3-green(onclick="apagaItem('" + i.identificador + "')") Remover aluno
+        </div>
+        <div style="margin:2cm;">
+            .w3-container
+                footer.w3-container.w3-green
+                        address Gerado por: Jaime Leite
+        </div>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:\Users\ASUS\Desktop\PRI\TP4/pr.dtd">
+<pr>
+    <meta>
+        <keyname>TPC4-PRI-PLC</keyname>
+        <title>Desenvolvimento de um servidor em NodeJs relativo ao arvivo de músicas</title>
+        <subtitle>Trabalho referente ao quarto TPC da unidade curricular de PRI</subtitle>
+        <bdate>2019-10-21</bdate>
+        <edate>2019-10-28</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>Jaime Leite</name>
+            <identifier>A80757</identifier>
+            <email>a80757@alunos.uminho.pt</email>
+            <photo path="imagens/aluno.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>O trabalho que foi necessário efetuar para o quarto TPC de PRI relaciona-se com o desenvolvimento (<i>em NodeJs</i>) de um servidor capaz de responder a pedidos
+            provenientes do lado do cliente para obter informação referente a uma dada música. Partindo de um <b>XML</b> inicial, <i>arq-son.xml</i>, efetuou-se a sua 
+            divisão por tags <i>doc</i> em vários ficheiros <b>XML</b>, usando para isso a stylesheet <i>arq.xsl</i>. Esta divisão foi efetuada, tendo como base o 
+            trabalho desenvolvido na aula de dia 21/10/2019 pelo professor <xref url="http://www4.di.uminho.pt/~jcr/">José Ramalho</xref>.
+        </p>
+        <p>Relativamente ao servidor, trataram-se, num ficheiro <i>.js</i>, os diferentes tipos de pedidos que este poderia receber. Assim, foram especificados os casos em 
+            que é pedido um determinado ficheiro XML, por exemplo, <u>doc1.xml</u>. Para se apresentar o ficheiro ao "cliente", é necessário saber o número que foi indicado no método 
+            <b>GET</b>(de referir que para outro tipo de métodos, o servidor responde com uma mensagem de erro). Ao <i>url</i> do <i>request</i>, é aplicado um 
+            filtro(<b>split</b>), que retira do mesmo o identificador do ficheiro <b>XML</b>. Este ficheiro <b>XML</b> é lido, sendo posteriormente formado um pacote de dados 
+            com a informação lida. De seguida, foi necessário fazer a conversão do ficheiro <b>XML</b> para <b>HTML</b>. Foi definida uma stylesheet, designada por <i>doc2html.xsl</i> 
+            que, para nodos associados às tags <b>XML</b> de um dado documento, aplica instruções HTML aos mesmos. Sendo assim, também foi necessário especificar o caso de o 
+            método <b>GET</b> conter a designação <i>doc2html.xsl</i>. Por fim, definiu-se que o servidor também estaria apto para tratar de pedidos do ficheiro <u>w3.css</u>, 
+            nos casos em que é necessário aplicar certos formatos e templates ao texto <b>HTML</b>. Nestes dois últimos casos, foram igualmente formados pacotes de dados com a 
+            informação lida dos ficheiros indicados. Para outro tipo de pedidos, o servidor responde com uma mensagem de erro.
+        </p>
+        <p>É de realçar que os pedidos que o servidor está apto para tratar são sequenciais, dado que, partindo, por exemplo, do URL inicial "http://localhost:3021/musica/8",
+            primeiramente é pedido ao servidor o ficheiro <u>doc8.xml</u>, sendo depois pedida a stylesheet de conversão para <b>HTML</b> e, por fim, é pedido o ficheiro 
+            <u>w3.css</u>, para aplicar as formatações devidas ao ficheiro que se apresenta ao cliente.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP4">Trabalhos realizados</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP4/pr.xml">Pr.xml</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP4/pr.xsl">Pr.xsl</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP4/pr.html">Pr.html</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP4/pr.dtd">Pr.dtd</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP4/arq_son.js">Servidor</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP4/data">Ficheiros XML</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP4/doc2html.xsl">Conversão de XML para HTML</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/blob/master/TP4/arq-son.xsl">Divisão em vários ficheiros XML</deliverable>
+    </deliverables>
+</pr>
