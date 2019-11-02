@@ -51,14 +51,14 @@ router.get('/registoNotas/:id', function(req, res) {
 })
 
 router.post('/alunos/:idAluno/notas', function(req, res) {
-  var id = req.params.idAluno
+  var ident = req.params.idAluno
   jsonfile.readFile(myBD, (erro, alunos)=>{
       if(!erro){
-        var index = alunos.findIndex(c => c.identificador == id)
-        var alu = alunos[index]
+        var indice = alunos.findIndex(c => c.identificador == ident)
+        var alu = alunos[indice]
         alu.notas.push(req.body)
       
-        alunos.splice(index, 1)
+        alunos.splice(indice, 1)
         alunos.push(alu)
         jsonfile.writeFile(myBD, alunos, erro => {
             if(erro) console.log(erro)
