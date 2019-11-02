@@ -28,23 +28,23 @@
          <table>
             <tr>
                <th align="left">Key_name: </th>
-               <td>TPC4-PRI-PLC</td>
+               <td>TPC5-PRI-PLC</td>
             </tr>
             <tr>
                <th align="left">Title: </th>
-               <td>Desenvolvimento de um servidor em NodeJs relativo ao arvivo de músicas</td>
+               <td>Desenvolvimento de um servidor em NodeJs relativo à gestão de alunos</td>
             </tr>
             <tr>
                <th align="left">Subtitle: </th>
-               <td>Trabalho referente ao quarto TPC da unidade curricular de PRI</td>
+               <td>Trabalho referente ao quinto TPC da unidade curricular de PRI</td>
             </tr>
             <tr>
                <th align="left">Inicial date: </th>
-               <td>2019-10-21</td>
+               <td>2019-10-28</td>
             </tr>
             <tr>
                <th align="left">End date: </th>
-               <td>2019-10-28</td>
+               <td>2019-10-4</td>
             </tr>
          </table>
          <p>
@@ -95,63 +95,35 @@
             <span style="color:red">Abstracts</span>
          </h2>
          
-         <p>O trabalho que foi necessário efetuar para o quarto TPC de PRI relaciona-se com o
-            desenvolvimento (
-            <i>em NodeJs</i>) de um servidor capaz de responder a pedidos
-            provenientes do lado do cliente para obter informação referente a uma dada música.
-            Partindo de um 
-            <b>XML</b> inicial, 
-            <i>arq-son.xml</i>, efetuou-se a sua 
-            divisão por tags 
-            <i>doc</i> em vários ficheiros 
-            <b>XML</b>, usando para isso a stylesheet 
-            <i>arq.xsl</i>. Esta divisão foi efetuada, tendo como base o 
-            trabalho desenvolvido na aula de dia 21/10/2019 pelo professor 
-            <a href="http://www4.di.uminho.pt/~jcr/">José Ramalho</a>.
+         <p>O trabalho que foi necessário efetuar para o quinto TPC de PRI relaciona-se com o
+            desenvolvimento 
+            <i>em NodeJs</i>, apoiado por 
+            <i>ExpressJS</i>, de um servidor 
+            capaz de responder a pedidos provenientes do lado do cliente para registar/consultar/eliminar
+            alunos de uma base de dados, que é persistida por um ficheiro
+            em 
+            <b>JSon</b>. 
             
          </p>
          
-         <p>Relativamente ao servidor, trataram-se, num ficheiro 
-            <i>.js</i>, os diferentes tipos de pedidos que este poderia receber. Assim, foram especificados
-            os casos em 
-            que é pedido um determinado ficheiro XML, por exemplo, 
-            <u>doc1.xml</u>. Para se apresentar o ficheiro ao "cliente", é necessário saber o número que foi
-            indicado no método 
+         <p>Como resultado do trabalho desenvolvido, o servidor é capaz de responder a métodos
             
-            <b>GET</b>(de referir que para outro tipo de métodos, o servidor responde com uma mensagem de
-            erro). Ao 
-            <i>url</i> do 
-            <i>request</i>, é aplicado um 
-            filtro(
-            <b>split</b>), que retira do mesmo o identificador do ficheiro 
-            <b>XML</b>. Este ficheiro 
-            <b>XML</b> é lido, sendo posteriormente formado um pacote de dados 
-            com a informação lida. De seguida, foi necessário fazer a conversão do ficheiro 
-            <b>XML</b> para 
-            <b>HTML</b>. Foi definida uma stylesheet, designada por 
-            <i>doc2html.xsl</i> 
-            que, para nodos associados às tags 
-            <b>XML</b> de um dado documento, aplica instruções HTML aos mesmos. Sendo assim, também foi
-            necessário especificar o caso de o 
-            método 
-            <b>GET</b> conter a designação 
-            <i>doc2html.xsl</i>. Por fim, definiu-se que o servidor também estaria apto para tratar de pedidos do
-            ficheiro 
-            <u>w3.css</u>, 
-            nos casos em que é necessário aplicar certos formatos e templates ao texto 
-            <b>HTML</b>. Nestes dois últimos casos, foram igualmente formados pacotes de dados com a 
-            informação lida dos ficheiros indicados. Para outro tipo de pedidos, o servidor responde
-            com uma mensagem de erro.
-            
-         </p>
-         
-         <p>É de realçar que os pedidos que o servidor está apto para tratar são sequenciais,
-            dado que, partindo, por exemplo, do URL inicial "http://localhost:3021/musica/8",
-            primeiramente é pedido ao servidor o ficheiro 
-            <u>doc8.xml</u>, sendo depois pedida a stylesheet de conversão para 
-            <b>HTML</b> e, por fim, é pedido o ficheiro 
-            
-            <u>w3.css</u>, para aplicar as formatações devidas ao ficheiro que se apresenta ao cliente.
+            <b>GET</b>, 
+            <b>POST</b> e 
+            <b>DELETE</b>. Relativamente  ao primeiro método 
+            referenciado, é possível apresentar ao cliente todos os alunos presentes na base de
+            dados (
+            <u>GET /alunos</u>), bem como a informação relativa a um determinado 
+            aluno (
+            <u>GET /alunos/:idAluno</u>). Relativamente ao método 
+            <b>POST</b>, é possível atualizar a base de dados com um novo aluno (
+            <u>POST /alunos</u>) ou ainda 
+            atualizar as notas de um determinado aluno(
+            <u>POST /alunos/:idAluno/notas</u>). Relativamente ao método 
+            <b>DELETE</b>, o servidor é capaz de tratar da eliminação
+            de um determinado aluno da base de dados(
+            <u>DELETE /alunos/:idAluno)</u>) ou ainda de apagar uma nota de um aluno(
+            <u>DELETE /alunos/:idAluno/notas/:indicador</u>).
             
          </p>
          
@@ -163,39 +135,15 @@
          </h2>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRI/tree/master/TP4">Trabalhos realizados</a>
+            <a href="https://github.com/jaimeleite/PRI/tree/master/TP5">Trabalho realizado</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRI/blob/master/TP4/pr.xml">Pr.xml</a>
+            <a href="https://github.com/jaimeleite/PRI/tree/master/TP5/PR">Manifesto</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRI/blob/master/TP4/pr.xsl">Pr.xsl</a>
-         </li>
-         
-         <li>
-            <a href="https://github.com/jaimeleite/PRI/blob/master/TP4/pr.html">Pr.html</a>
-         </li>
-         
-         <li>
-            <a href="https://github.com/jaimeleite/PRI/blob/master/TP4/pr.dtd">Pr.dtd</a>
-         </li>
-         
-         <li>
-            <a href="https://github.com/jaimeleite/PRI/blob/master/TP4/arq_son.js">Servidor</a>
-         </li>
-         
-         <li>
-            <a href="https://github.com/jaimeleite/PRI/tree/master/TP4/data">Ficheiros XML</a>
-         </li>
-         
-         <li>
-            <a href="https://github.com/jaimeleite/PRI/blob/master/TP4/doc2html.xsl">Conversão de XML para HTML</a>
-         </li>
-         
-         <li>
-            <a href="https://github.com/jaimeleite/PRI/blob/master/TP4/arq-son.xsl">Divisão em vários ficheiros XML</a>
+            <a href="https://github.com/jaimeleite/PRI/tree/master/TP5/gestaoAlunos">Servidor para gestão de alunos</a>
          </li>
          
       </div>
