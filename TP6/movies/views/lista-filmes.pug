@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  <div style="margin:2cm; border-top: solid green;">
+    .w3-container
+      h1 Lista de filmes da base de dados "filmes"
+      table.w3-table-all
+        tr
+          th
+          th
+          th Título
+          th Ano
+        each filme in lista
+          tr
+            td
+                form.form-inline(method="get" action=`/filmes/` + filme._id)
+                  button.w3-button.w3-green(type="submit") Ver descrição
+            td 
+                button.w3-button.w3-green(onclick="apagaFilme('" + filme._id + "')") Delete
+            td= filme.title
+            td= filme.year
+  </div>
+          

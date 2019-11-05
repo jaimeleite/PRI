@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  <div style="margin:2cm; border-top: solid green;">
+    .w3-container
+      h1 Inserção de um filme
+      form.w3-container(action="/filmes" method="POST")
+          div(style="margin:2em 0;")
+            label Título
+            input.w3-input.w3-border-green(type="text" name="title" placeholder="Insira um título")
+          div(style="margin:2em 0;")
+            label Ano
+            input.w3-input.w3-border-green(type="text" name="year" placeholder="Insira um ano")
+          div(style="margin:2em 0;")
+            label Elenco
+            input.w3-input.w3-border-green(type="text" name="cast" placeholder="Insira um elenco")
+            input.w3-input.w3-border-green(type="text" name="cast" placeholder="Insira um elenco")
+          div(style="margin:2em 0;")
+            label Categorias
+            input.w3-input.w3-border-green(type="text" name="genres" placeholder="Insira uma categoria")
+            input.w3-input.w3-border-green(type="text" name="genres" placeholder="Insira uma categoria")
+          input.w3-input.w3-green(type="submit" value="Enviar")
+  </div>
