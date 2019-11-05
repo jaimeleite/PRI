@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:\Users\ASUS\Desktop\PRI\TP4/pr.dtd">
+<pr>
+    <meta>
+        <keyname>TPC5-PRI-PLC</keyname>
+        <title>Desenvolvimento de um servidor em NodeJs relativo à gestão de alunos</title>
+        <subtitle>Trabalho referente ao quinto TPC da unidade curricular de PRI</subtitle>
+        <bdate>2019-10-28</bdate>
+        <edate>2019-10-4</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>Jaime Leite</name>
+            <identifier>A80757</identifier>
+            <email>a80757@alunos.uminho.pt</email>
+            <photo path="imagens/aluno.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>O trabalho que foi necessário efetuar para o quinto TPC de PRI relaciona-se com o desenvolvimento <i>em NodeJs</i>, apoiado por <i>ExpressJS</i>, de um servidor 
+            capaz de responder a pedidos provenientes do lado do cliente para registar/consultar/eliminar alunos de uma base de dados, que é persistida por um ficheiro
+            em <b>JSon</b>. 
+        </p>
+        <p>Como resultado do trabalho desenvolvido, o servidor é capaz de responder a métodos <b>GET</b>, <b>POST</b> e <b>DELETE</b>. Relativamente  ao primeiro método 
+            referenciado, é possível apresentar ao cliente todos os alunos presentes na base de dados (<u>GET /alunos</u>), bem como a informação relativa a um determinado 
+            aluno (<u>GET /alunos/:idAluno</u>). Relativamente ao método <b>POST</b>, é possível atualizar a base de dados com um novo aluno (<u>POST /alunos</u>) ou ainda 
+            atualizar as notas de um determinado aluno(<u>POST /alunos/:idAluno/notas</u>). Relativamente ao método <b>DELETE</b>, o servidor é capaz de tratar da eliminação
+            de um determinado aluno da base de dados(<u>DELETE /alunos/:idAluno)</u>) ou ainda de apagar uma nota de um aluno(<u>DELETE /alunos/:idAluno/notas/:indicador</u>).
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP5">Trabalho realizado</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP5/PR">Manifesto</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP5/gestaoAlunos">Servidor para gestão de alunos</deliverable>
+    </deliverables>
+</pr>
