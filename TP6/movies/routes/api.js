@@ -27,7 +27,9 @@ router.post('/filmes', function(req,res){
 
 
 router.delete('/filmes/:id', function(req, res) {
-    Filmes.remover(req.params.id)
+    var guarda_id = req.params.id
+    
+    Filmes.apaga(guarda_id)
         .then(dados => res.jsonp(dados))
         .catch(erro => res.status(500).jsonp(erro))
 })

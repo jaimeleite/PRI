@@ -38,7 +38,7 @@ module.exports.inserir = filme => {
     return new_filme.save()
 }
 
-Filmes.remover = id_filme => {
+Filmes.apaga = id_filme => {
     return Filme
         .deleteOne({_id:id_filme})
         .exec()

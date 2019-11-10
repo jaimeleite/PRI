@@ -6,7 +6,7 @@ const axios = require('axios')
 router.get('/', function(req, res, next) {
     axios.get('http://localhost:3004/api/filmes')
         .then(dados => {
-            res.render('lista-filmes', {lista: dados.data});
+            res.render('listagem-filmes', {lista: dados.data});
         })
         .catch(erro => {
             res.render('error', {error: erro})
@@ -24,7 +24,7 @@ router.post('/', function(req,res){
 })
 
 router.get('/inserir', function(req,res){
-    res.render('form-filme')
+    res.render('formar-filme')
 })
 
 router.get('/:id', function(req,res){
@@ -37,7 +37,9 @@ router.get('/:id', function(req,res){
 })
 
 router.delete('/:id', function(req, res, next){
-    axios.delete('http://localhost:3004/api/filmes/' + req.params.id)
+    var armazena_id = req.params.id
+    
+    axios.delete('http://localhost:3004/api/filmes/' + armazena_id)
     .then(dados => {
       res.redirect(303,'/')
     })
