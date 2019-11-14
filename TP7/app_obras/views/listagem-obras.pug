@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  <div style="margin:2cm; border-top: solid green;">
+    .w3-container
+      h1 Listagem das obras
+      table.w3-table-all
+        tr
+          th Nome
+          th Descricao
+          th Ano de Criação
+          th Periodo
+          th Compositor
+          th Duracao
+        each obra in obras
+          tr
+            td= obra.nome
+            td= obra.desc
+            td= obra.anoCriacao
+            td= obra.periodo
+            td= obra.compositor
+            td= obra.duracao
+  </div>
+          
