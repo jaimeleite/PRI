@@ -28,23 +28,23 @@
          <table>
             <tr>
                <th align="left">Key_name: </th>
-               <td>TPC6-PRI-PLC</td>
+               <td>TPC7-PRI-PLC</td>
             </tr>
             <tr>
                <th align="left">Title: </th>
-               <td>Desenvolvimento de um servidor em NodeJs relativo à gestão de filmes</td>
+               <td>Desenvolvimento de um servidor em NodeJs relativo à gestão de obras</td>
             </tr>
             <tr>
                <th align="left">Subtitle: </th>
-               <td>Trabalho referente ao sextp TPC da unidade curricular de PRI</td>
+               <td>Trabalho referente ao sétimo TPC da unidade curricular de PRI</td>
             </tr>
             <tr>
                <th align="left">Inicial date: </th>
-               <td>2019-11-4</td>
+               <td>2019-11-11</td>
             </tr>
             <tr>
                <th align="left">End date: </th>
-               <td>2019-10-11</td>
+               <td>2019-11-18</td>
             </tr>
          </table>
          <p>
@@ -95,41 +95,28 @@
             <span style="color:red">Abstracts</span>
          </h2>
          
-         <p>O trabalho que foi necessário efetuar para o sexto TPC de PRI relaciona-se com o desenvolvimento
-            
+         <p>O trabalho que foi necessário efetuar para o sétimo TPC de PRI relaciona-se com o
+            desenvolvimento 
             <i>em NodeJs</i>, apoiado por 
             <i>ExpressJS</i>, de um servidor 
-            capaz de responder a pedidos provenientes do lado do cliente para registar/consultar/eliminar
-            filmes de uma base de dados em 
+            capaz de responder a pedidos provenientes do lado do cliente para consultar obras
+            de uma base de dados em 
             <b>MongoDB</b>. 
             
          </p>
          
          <p>
-            Como resposta às especificações para este TPC, o servidor é capaz de: responder a
-            pedidos para apresentar a página principal (
-            <u>GET /</u>), no roteador 
-            <b>index</b>;
-            no roteador 
-            <b>filmes</b> são respondidos aos pedidos 
-            <u>GET /filmes</u>, 
-            <u>GET /filmes/:id</u>, 
-            <u>GET /filmes/inserir</u>, 
-            <u>POST /filmes</u>
-            e 
-            <u>DELETE /filmes/:id</u>. Para estes pedidos, é apresentada a página com todos os filmes, é pesquisado um
-            dado filme, é apresentado o formulário relativo
-            ao registo de um dado filme, inserir um filme na base de dados e remover um dado filme
-            da base de dados, respetivamente. Já no roteador 
-            <b>api</b>, são analisados os
-            pedidos 
-            <u>GET /api/filmes</u>, 
-            <u>GET /api/filmes/:id</u>, 
-            <u>POST /api/filmes</u>, 
-            <u>DELETE /api/filmes/:id</u>. Este roteador faz a ligação com a base de dados e os
-            pedidos indicados anteriormente relacionam-se com a visualização de todos os filmes,
-            a visualização de um dado filme, inserir um dado filme na base de dados e apagar
-            um determinado filme da base de dados, respetivamente.
+            Como resposta às especificações para este TPC, o servidor é capaz de responder a vários
+            pedidos de GET, tais como: consultar todas as obras da base de dados
+            (
+            <b>"GET /obras"</b>); consultar as obras de um determinado periodo(
+            <b>"GET /obras?periodo=x"</b>); consultar as obras com um dado ano de criação
+            (
+            <b>"GET /obras?anoCriacao=y")</b>); consultar todas as obras que pertencem a um compositor(
+            <b>"GET /obras?compositor=A"</b> / 
+            <b>"GET /compositores/:nome")</b>;
+            consultar todos os compositores(
+            <b>"GET /compositores")</b>. Este servidor apenas tem um roteador para responder aos pedidos.
             
          </p>
          
@@ -141,15 +128,15 @@
          </h2>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRI/tree/master/TP6">Trabalho realizado</a>
+            <a href="https://github.com/jaimeleite/PRI/tree/master/TP7">Trabalho realizado</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRI/tree/master/TP6/PR">Manifesto</a>
+            <a href="https://github.com/jaimeleite/PRI/tree/master/TP7/PR">Manifesto</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRI/tree/master/TP6/movies">Servidor para gestão de filmes</a>
+            <a href="https://github.com/jaimeleite/PRI/tree/master/TP7/app_obras">Servidor para gestão de obras</a>
          </li>
          
       </div>
