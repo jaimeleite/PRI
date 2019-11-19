@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:\Users\ASUS\Desktop\PRI\TP4/pr.dtd">
+<pr>
+    <meta>
+        <keyname>TPC7-PRI-PLC</keyname>
+        <title>Desenvolvimento de um servidor em NodeJs relativo à gestão de obras</title>
+        <subtitle>Trabalho referente ao sétimo TPC da unidade curricular de PRI</subtitle>
+        <bdate>2019-11-11</bdate>
+        <edate>2019-11-18</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>Jaime Leite</name>
+            <identifier>A80757</identifier>
+            <email>a80757@alunos.uminho.pt</email>
+            <photo path="imagens/aluno.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>O trabalho que foi necessário efetuar para o sétimo TPC de PRI relaciona-se com o desenvolvimento <i>em NodeJs</i>, apoiado por <i>ExpressJS</i>, de um servidor 
+            capaz de responder a pedidos provenientes do lado do cliente para consultar obras de uma base de dados em <b>MongoDB</b>. 
+        </p>
+        <p>
+            Como resposta às especificações para este TPC, o servidor é capaz de responder a vários pedidos de GET, tais como: consultar todas as obras da base de dados
+            (<b>"GET /obras"</b>); consultar as obras de um determinado periodo(<b>"GET /obras?periodo=x"</b>); consultar as obras com um dado ano de criação
+            (<b>"GET /obras?anoCriacao=y")</b>); consultar todas as obras que pertencem a um compositor(<b>"GET /obras?compositor=A"</b> / <b>"GET /compositores/:nome")</b>;
+            consultar todos os compositores(<b>"GET /compositores")</b>. Este servidor apenas tem um roteador para responder aos pedidos.
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP7">Trabalho realizado</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP7/PR">Manifesto</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP7/app_obras">Servidor para gestão de obras</deliverable>
+    </deliverables>
+</pr>
