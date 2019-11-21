@@ -28,23 +28,23 @@
          <table>
             <tr>
                <th align="left">Key_name: </th>
-               <td>TPC7-PRI-PLC</td>
+               <td>TPC8-PRI-PLC</td>
             </tr>
             <tr>
                <th align="left">Title: </th>
-               <td>Desenvolvimento de um servidor em NodeJs relativo à gestão de obras</td>
+               <td>Desenvolvimento de um servidor em NodeJs relativo à gestão de ficheiros</td>
             </tr>
             <tr>
                <th align="left">Subtitle: </th>
-               <td>Trabalho referente ao sétimo TPC da unidade curricular de PRI</td>
+               <td>Trabalho referente ao oitavo TPC da unidade curricular de PRI</td>
             </tr>
             <tr>
                <th align="left">Inicial date: </th>
-               <td>2019-11-11</td>
+               <td>2019-11-18</td>
             </tr>
             <tr>
                <th align="left">End date: </th>
-               <td>2019-11-18</td>
+               <td>2019-11-25</td>
             </tr>
          </table>
          <p>
@@ -95,28 +95,23 @@
             <span style="color:red">Abstracts</span>
          </h2>
          
-         <p>O trabalho que foi necessário efetuar para o sétimo TPC de PRI relaciona-se com o
+         <p>O trabalho que foi necessário efetuar para o oitavo TPC de PRI relaciona-se com o
             desenvolvimento 
             <i>em NodeJs</i>, apoiado por 
             <i>ExpressJS</i>, de um servidor 
-            capaz de responder a pedidos provenientes do lado do cliente para consultar obras
+            capaz de responder a pedidos provenientes do lado do cliente para consultar ficheiros
             de uma base de dados em 
-            <b>MongoDB</b>. 
+            <b>MongoDB</b>. Os resultados destas consultas são
+            expressos por modais, em que a informação sobre os ficheiros selecionados são apresentados
+            nos mesmos(no caso de imagens, estas aparecem nos modais).
             
          </p>
          
          <p>
-            Como resposta às especificações para este TPC, o servidor é capaz de responder a vários
-            pedidos de GET, tais como: consultar todas as obras da base de dados
-            (
-            <b>"GET /obras"</b>); consultar as obras de um determinado periodo(
-            <b>"GET /obras?periodo=x"</b>); consultar as obras com um dado ano de criação
-            (
-            <b>"GET /obras?anoCriacao=y")</b>); consultar todas as obras que pertencem a um compositor(
-            <b>"GET /obras?compositor=A"</b> / 
-            <b>"GET /compositores/:nome")</b>;
-            consultar todos os compositores(
-            <b>"GET /compositores")</b>. Este servidor apenas tem um roteador para responder aos pedidos.
+            Os clientes deste servidor também conseguem fazer 
+            <b>UPLOAD</b> de ficheiros, sendo estes movidos de um determinado local do seu dispositivo para
+            uma pasta específica
+            onde está a correr o projeto.
             
          </p>
          
@@ -128,15 +123,15 @@
          </h2>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRI/tree/master/TP7">Trabalho realizado</a>
+            <a href="https://github.com/jaimeleite/PRI/tree/master/TP8">Trabalho realizado</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRI/tree/master/TP7/PR">Manifesto</a>
+            <a href="https://github.com/jaimeleite/PRI/tree/master/TP8/PR">Manifesto</a>
          </li>
          
          <li>
-            <a href="https://github.com/jaimeleite/PRI/tree/master/TP7/app_obras">Servidor para gestão de obras</a>
+            <a href="https://github.com/jaimeleite/PRI/tree/master/TP8/gestorFicheiros">Servidor para gestão de ficheiros</a>
          </li>
          
       </div>

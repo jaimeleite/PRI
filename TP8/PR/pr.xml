@@ -2,11 +2,11 @@
 <!DOCTYPE pr SYSTEM "file:/C:\Users\ASUS\Desktop\PRI\TP4/pr.dtd">
 <pr>
     <meta>
-        <keyname>TPC7-PRI-PLC</keyname>
-        <title>Desenvolvimento de um servidor em NodeJs relativo à gestão de obras</title>
-        <subtitle>Trabalho referente ao sétimo TPC da unidade curricular de PRI</subtitle>
-        <bdate>2019-11-11</bdate>
-        <edate>2019-11-18</edate>
+        <keyname>TPC8-PRI-PLC</keyname>
+        <title>Desenvolvimento de um servidor em NodeJs relativo à gestão de ficheiros</title>
+        <subtitle>Trabalho referente ao oitavo TPC da unidade curricular de PRI</subtitle>
+        <bdate>2019-11-18</bdate>
+        <edate>2019-11-25</edate>
         <supervisor>
             <name>José Carlos Ramalho</name>
             <email>jcr@di.uminho.pt</email>
@@ -22,19 +22,18 @@
         </member>
     </workteam>
     <abstract>
-        <p>O trabalho que foi necessário efetuar para o sétimo TPC de PRI relaciona-se com o desenvolvimento <i>em NodeJs</i>, apoiado por <i>ExpressJS</i>, de um servidor 
-            capaz de responder a pedidos provenientes do lado do cliente para consultar obras de uma base de dados em <b>MongoDB</b>. 
+        <p>O trabalho que foi necessário efetuar para o oitavo TPC de PRI relaciona-se com o desenvolvimento <i>em NodeJs</i>, apoiado por <i>ExpressJS</i>, de um servidor 
+            capaz de responder a pedidos provenientes do lado do cliente para consultar ficheiros de uma base de dados em <b>MongoDB</b>. Os resultados destas consultas são
+            expressos por modais, em que a informação sobre os ficheiros selecionados são apresentados nos mesmos(no caso de imagens, estas aparecem nos modais).
         </p>
         <p>
-            Como resposta às especificações para este TPC, o servidor é capaz de responder a vários pedidos de GET, tais como: consultar todas as obras da base de dados
-            (<b>"GET /obras"</b>); consultar as obras de um determinado periodo(<b>"GET /obras?periodo=x"</b>); consultar as obras com um dado ano de criação
-            (<b>"GET /obras?anoCriacao=y")</b>); consultar todas as obras que pertencem a um compositor(<b>"GET /obras?compositor=A"</b> / <b>"GET /compositores/:nome")</b>;
-            consultar todos os compositores(<b>"GET /compositores")</b>. Este servidor apenas tem um roteador para responder aos pedidos.
+            Os clientes deste servidor também conseguem fazer <b>UPLOAD</b> de ficheiros, sendo estes movidos de um determinado local do seu dispositivo para uma pasta específica
+            onde está a correr o projeto.
         </p>
     </abstract>
     <deliverables>
-        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP7">Trabalho realizado</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP7/PR">Manifesto</deliverable>
-        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP7/app_obras">Servidor para gestão de obras</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP8">Trabalho realizado</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP8/PR">Manifesto</deliverable>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP8/gestorFicheiros">Servidor para gestão de ficheiros</deliverable>
     </deliverables>
 </pr>
