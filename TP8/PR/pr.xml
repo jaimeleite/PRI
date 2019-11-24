@@ -28,7 +28,7 @@
         </p>
         <p>
             Os clientes deste servidor também conseguem fazer <b>UPLOAD</b> de ficheiros, sendo estes movidos de um determinado local do seu dispositivo para uma pasta específica
-            onde está a correr o projeto.
+            onde está a correr o projeto. Além disso, os clientes conseguem visualizar todos os ficheiros contidos na base de dados.
         </p>
     </abstract>
     <deliverables>
