@@ -1,0 +1,39 @@
+extends layout
+
+block content
+    .w3-container.w3-responsive.w3-small
+        h1.w3-center
+        b=id
+        h1 Informacao Geral
+        table.w3-table-all
+            tr.w3-grey
+                th Estado
+                th Sigla
+                th Designacao
+            each info in infoGeral
+                tr
+                    td= info.estado
+                    td= info.sigla
+                    td= info.designacao
+        h1 Entidades da tipologia
+        table.w3-table-all
+            tr.w3-grey
+                th Sigla
+                th Designacao
+                th Id
+            each ele in entidades
+                tr
+                    td= ele.sigla
+                    td= ele.designacao
+                    td= ele.id
+        h1 Processos de que é dona
+        table.w3-table-all
+            tr.w3-grey
+                th Código
+                th Título
+                th Id
+            each pro in processos
+                tr
+                    td= pro.codigo
+                    td= pro.titulo
+                    td= pro.id

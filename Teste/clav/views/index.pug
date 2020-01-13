@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1 Clav
+  h2 Exercício 2 do teste de PRI
+  .w3-container.w3-responsive.w3-small
+    h3.w3-center
+      b Tipologias
+    table.w3-table-all
+      tr.w3-grey
+        th Estato
+        th Sigla
+        th Designação
+        th Id_tipologia
+      each tipologia in tipologias
+        tr
+          td
+            a(href='/obtemInfo/' + tipologia.id)= tipologia.estado
+          td
+            a(href='/obtemInfo/' + tipologia.id)= tipologia.sigla
+          td
+            a(href='/obtemInfo/' + tipologia.id)= tipologia.designacao
+          td
+            a(href='/obtemInfo/' + tipologia.id)= tipologia.id

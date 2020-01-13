@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:\Users\ASUS\Desktop\PRI\TP4/pr.dtd">
+<pr>
+    <meta>
+        <keyname>Teste de PRI</keyname>
+        <title>Teste da UC PRI - 2019/20</title>
+        <subtitle>Teste de dia 13 de janeiro de 2020</subtitle>
+        <bdate>2020-01-13</bdate>
+        <edate>2020-01-13</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <name>Jaime Leite</name>
+            <identifier>A80757</identifier>
+            <email>a80757@alunos.uminho.pt</email>
+            <photo path="imagens/aluno.jpg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>O trabalho que nos foi apresentado é relativo ao desenvolvimento de dois exs. No primeiro, temos de criar um servidor em NodeJs capaz de suportar uma API de dados.
+            No segundo, temos de fazer uma interface para visualizar informações acerca das tipologias do Clav.
+            No primeiro ex, para fazer a persistência dos dados, foi utilizado o Mongo. Para importar os dados, foi utilizado o comando "mongoimport -d publicacoes -c publicacoes --jsonArray jcrpubs.json".
+        </p>
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/jaimeleite/PRI/tree/master/TP8">Trabalho realizado</deliverable>
+    </deliverables>
+</pr>
